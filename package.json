@@ -1,0 +1,32 @@
+{
+  "name": "moviehunt",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "make-exe": "pkg launcher.cjs --targets node18-win-x64 --output MovieHunt.exe"
+  },
+  "pkg": {
+    "scripts": "launcher.cjs",
+    "targets": ["node18-win-x64"],
+    "outputPath": "."
+  },
+  "dependencies": {
+    "axios": "^1.20.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "pkg": "^5.8.1",
+    "vite": "^8.3.0"
+  }
+}

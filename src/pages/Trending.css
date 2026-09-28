@@ -1,0 +1,75 @@
+.trending-page {
+  padding: calc(var(--nav-height) + 2rem) 4% 4rem;
+  min-height: 100vh;
+}
+
+.trending-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.trending-page__header h1 {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.trending-page__tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tab-btn {
+  padding: 0.45rem 1.1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: var(--bg2);
+  color: var(--text-muted);
+  border: 1px solid var(--bg3);
+  transition: background 0.2s, color 0.2s;
+}
+
+.tab-btn:hover { color: #fff; }
+
+.tab-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* Grid */
+.trending-page__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.5rem 1rem;
+}
+
+.trending-item {
+  position: relative;
+}
+
+.trending-rank {
+  position: absolute;
+  bottom: -12px;
+  left: -8px;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.06);
+  line-height: 1;
+  z-index: 0;
+  pointer-events: none;
+  -webkit-text-stroke: 2px rgba(255,255,255,0.15);
+  user-select: none;
+}
+
+.trending-skeleton {
+  height: 225px;
+  border-radius: var(--card-radius);
+  background: linear-gradient(90deg, var(--bg2) 25%, var(--bg3) 50%, var(--bg2) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}

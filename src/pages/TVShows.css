@@ -1,0 +1,25 @@
+.tvshows-page {
+  padding-top: var(--nav-height);
+  min-height: 100vh;
+}
+
+.tvshows-page__hero {
+  padding: 3rem 4% 1rem;
+  background: linear-gradient(to bottom, rgba(139,92,246,0.15), transparent);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.tvshows-page__hero h1 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 0.4rem;
+}
+
+.tvshows-page__hero p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.tvshows-page__rows {
+  padding: 1.5rem 0 4rem;
+}

@@ -1,0 +1,223 @@
+.mylist-page {
+  padding: calc(var(--nav-height) + 2rem) 4% 4rem;
+  min-height: 100vh;
+}
+
+.mylist-page__header {
+  margin-bottom: 1.5rem;
+}
+
+.mylist-page__header h1 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.mylist-page__header p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+/* ── Tabs ── */
+.mylist-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.mylist-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: var(--bg2);
+  color: var(--text-muted);
+  border: 1px solid var(--bg3);
+  transition: all 0.2s;
+}
+
+.mylist-tab:hover { color: #fff; border-color: rgba(255,255,255,0.2); }
+
+.mylist-tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.mylist-tab__count {
+  background: rgba(255,255,255,0.15);
+  padding: 1px 7px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  min-width: 22px;
+  text-align: center;
+}
+
+/* ── Empty ── */
+.mylist-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.mylist-empty span { font-size: 3.5rem; }
+.mylist-empty h2 { font-size: 1.4rem; font-weight: 700; }
+.mylist-empty p { color: var(--text-muted); max-width: 360px; line-height: 1.5; }
+
+.mylist-empty button {
+  margin-top: 0.5rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.65rem 2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+
+.mylist-empty button:hover { background: var(--accent-hover); }
+
+/* ── Grid ── */
+.mylist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.25rem;
+}
+
+/* ── Card ── */
+.mylist-card {
+  background: var(--bg2);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid var(--bg3);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.mylist-card:hover {
+  border-color: rgba(255,255,255,0.2);
+  transform: translateY(-3px);
+}
+
+.mylist-card__img-wrap {
+  position: relative;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+}
+
+.mylist-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mylist-card__badges {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.badge-type {
+  font-size: 0.6rem;
+  font-weight: 800;
+  padding: 2px 5px;
+  border-radius: 3px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.badge-type.tv  { background: var(--accent); color: #fff; }
+.badge-type.fav { background: rgba(255,60,60,0.85); color: #fff; }
+.badge-type.wl  { background: rgba(59,130,246,0.85); color: #fff; }
+
+.mylist-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.mylist-card:hover .mylist-card__overlay { opacity: 1; }
+
+.mylist-card__play {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.mylist-card__play svg { width: 24px; height: 24px; margin-left: 3px; }
+
+/* Info */
+.mylist-card__info {
+  padding: 0.65rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.mylist-card__title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mylist-card__meta {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.mylist-card__actions {
+  display: flex;
+  gap: 0.35rem;
+  margin-top: 0.1rem;
+}
+
+.mylist-action-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--bg3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: color 0.15s, background 0.15s;
+}
+
+.mylist-action-btn svg { width: 14px; height: 14px; }
+.mylist-action-btn:hover { background: rgba(255,255,255,0.1); color: #fff; }
+.mylist-action-btn.fav-active { color: #ff4444; }
+.mylist-action-btn.wl-active  { color: #3b82f6; }
+.mylist-action-btn.remove-btn:hover { color: var(--accent); }
+
+@media (max-width: 480px) {
+  .mylist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.75rem;
+  }
+}
